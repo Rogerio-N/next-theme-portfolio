@@ -14,7 +14,7 @@
 
 @layer base {
   [data-theme="light"] {
-    --color-textbase: #f30000;
+    --color-textbase: #111827;
     --color-texthighlight: #10B981;
     --color-mainact: #1E3A8A;
     --color-secondaryact: #3B82F6;

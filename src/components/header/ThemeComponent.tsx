@@ -23,9 +23,9 @@ export default function ThemeComponent() {
     const isThemeLightActive = theme === "light"
 
     return (
-        <div onClick={handleThemeChange}>
+        <div className="hover:cursor-pointer" onClick={handleThemeChange}>
             {isThemeLightActive ? <SunIcon /> : <MoonIcon />}
-            <p>{theme}</p>
+            <p className="text-textbase">{theme}</p>
         </div>
     )
 }
