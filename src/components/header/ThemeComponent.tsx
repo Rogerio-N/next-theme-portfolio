@@ -1,6 +1,6 @@
 'use client'
 
-import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
@@ -24,8 +24,7 @@ export default function ThemeComponent() {
 
     return (
         <div className="hover:cursor-pointer" onClick={handleThemeChange}>
-            {isThemeLightActive ? <SunIcon /> : <MoonIcon />}
-            <p className="text-textbase">{theme}</p>
+            {isThemeLightActive ? <SunIcon className="w-8 h-full align-middle"/> : <MoonIcon className="w-6 h-full align-middle rotate-270"/>}
         </div>
     )
 }

@@ -6,6 +6,8 @@
   --color-lbackground: #F9FAFB;
   --color-dbackground: #0F172A;
   --color-textbase: #111827;
+  --color-ltext: #111827;
+  --color-dtext: #F8FAFC;
   --color-texthighlight: #10B981;
   --color-mainact: #1E3A8A;
   --color-secondaryact: #3B82F6;
@@ -15,6 +17,8 @@
 @layer base {
   [data-theme="light"] {
     --color-textbase: #111827;
+    --color-ltext: #111827;
+    --color-dtext: #F8FAFC;
     --color-texthighlight: #10B981;
     --color-mainact: #1E3A8A;
     --color-secondaryact: #3B82F6;
@@ -22,6 +26,8 @@
   }
   [data-theme="dark"] {
     --color-textbase: #F8FAFC;
+    --color-ltext: #111827;
+    --color-dtext: #F8FAFC;
     --color-texthighlight: #22c55e81;
     --color-mainact: #3B82F6;
     --color-secondaryact: #1E3A8A;
