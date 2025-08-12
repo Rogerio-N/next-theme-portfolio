@@ -39,7 +39,7 @@ export default function Skills() {
         <h2 className="text-textbase text-2xl font-bold mb-2">{translator('skills')}</h2>
         <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => 
-                <p id={index.toString()} className="text-textbase border-2 border-mainact w-fit max-w-xs px-5 py-1 rounded-4xl">{skill}</p>
+                <p id={index.toString()} key={index} className="text-textbase border-2 border-mainact w-fit max-w-xs px-5 py-1 rounded-4xl">{skill}</p>
             )}
         </div>
     </div>
