@@ -1,0 +1,56 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
+import { routing } from '@/i18n/routing'
+import '../globals.css'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { notFound } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
+
+const inter = Inter({
+    subsets: ['latin', 'latin-ext'],
+})
+
+// export const metadata: Metadata = {
+//     title: 'Rogerio Nakayama QA',
+//     description: 'This is rogerio nakayama QA Portfolio',
+// }
+
+export async function generateMetadata({
+    params,
+}: Readonly<{
+    params: Promise<{ locale: string }>
+}>) {
+    const { locale } = await params
+    const translator = await getTranslations({ locale, namespace: 'Metadata' })
+
+    return {
+        title: translator('title'),
+        description: translator('description'),
+    }
+}
+
+export default async function RootLayout({
+    children,
+    params,
+}: Readonly<{
+    children: React.ReactNode
+    params: Promise<{ locale: string }>
+}>) {
+    const { locale } = await params
+    if (!hasLocale(routing.locales, locale)) {
+        notFound()
+    }
+
+    return (
+        <html lang={locale} suppressHydrationWarning>
+            <body className={`${inter.className} antialiased`}>
+                <NextIntlClientProvider>
+                    <ThemeProvider enableSystem={true} defaultTheme="system">
+                        {children}
+                    </ThemeProvider>
+                </NextIntlClientProvider>
+            </body>
+        </html>
+    )
+}
