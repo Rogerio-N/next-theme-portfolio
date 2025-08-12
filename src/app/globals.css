@@ -22,16 +22,16 @@
     --color-texthighlight: #10B981;
     --color-mainact: #1E3A8A;
     --color-secondaryact: #3B82F6;
-    --color-hover: #2563EB;
+    --color-hover: #8aa4ec;
   }
   [data-theme="dark"] {
     --color-textbase: #F8FAFC;
     --color-ltext: #111827;
     --color-dtext: #F8FAFC;
-    --color-texthighlight: #22c55e81;
+    --color-texthighlight: #22c55e;
     --color-mainact: #3B82F6;
     --color-secondaryact: #1E3A8A;
-    --color-hover: #60A5FA;
+    --color-hover: #173463;
   }
 }
 

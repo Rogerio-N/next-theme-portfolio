@@ -6,15 +6,16 @@ import '../globals.css'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
+import type { Viewport } from 'next'
 
 const inter = Inter({
     subsets: ['latin', 'latin-ext'],
 })
 
-// export const metadata: Metadata = {
-//     title: 'Rogerio Nakayama QA',
-//     description: 'This is rogerio nakayama QA Portfolio',
-// }
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1
+}
 
 export async function generateMetadata({
     params,

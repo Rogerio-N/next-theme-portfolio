@@ -2,5 +2,18 @@
     "Metadata": {
         "title": "Rogerio Nakayama QA",
         "description": "This is my QA Portfolio, welcome"
+    },
+    "Home": {
+        "teste": "English",
+        "Badge": {
+            "description": "Medal symbol contoured in black tone with a drawing of a right icon in green tone in the middle of the medal"
+        },
+        "role": "Quality Assurance Engineer | Brazil",
+        "workDescription": "I'm a graduate in Software Analysis and Development with over 4 years of hands-on experience in the tech industry. I combine my formal education with solid commercial experience, actively participating in all phases of the software lifecycle, from initial planning to final delivery. Throughout my career, I've created detailed documentation, applied a wide range of tools and testing techniques, and leveraged development knowledge to ensure software quality and reliability. I'm passionate about identifying complex problems, breaking them down into manageable parts, and building practical, effective solutions.",
+        "personalTime": "When i am not working, i will probably be cooking a nice dish or maybe playing some video-games with my friends and family.",
+        "contactButton": "CONTACT ME",
+        "skills": "Skills",
+        "projects": "Projects",
+        "cog_alt": "Image of a lig gray cog"
     }
 }
