@@ -15,5 +15,8 @@
         "skills": "Skills",
         "projects": "Projects",
         "cog_alt": "Image of a lig gray cog"
+    },
+    "Footer": {
+        "contact": "Contact Me"
     }
 }
