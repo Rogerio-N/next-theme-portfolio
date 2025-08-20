@@ -3,8 +3,10 @@
         "title": "Rogerio Nakayama QA",
         "description": "This is my QA Portfolio, welcome"
     },
+    "Header": {
+        "language_label": "Language:"
+    },
     "Home": {
-        "teste": "English",
         "Badge": {
             "description": "Medal symbol contoured in black tone with a drawing of a right icon in green tone in the middle of the medal"
         },
