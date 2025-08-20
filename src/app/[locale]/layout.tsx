@@ -5,7 +5,7 @@ import '../globals.css'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
-import type { Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 const inter = Inter({
     subsets: ['latin', 'latin-ext'],
@@ -16,11 +16,11 @@ export const viewport: Viewport = {
     initialScale: 1
 }
 
-export async function generateMetadata({
-    params,
-}: Readonly<{
+type Props = {
     params: Promise<{ locale: string }>
-}>) {
+}
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
     const { locale } = await params
     const translator = await getTranslations({ locale, namespace: 'Metadata' })
 
