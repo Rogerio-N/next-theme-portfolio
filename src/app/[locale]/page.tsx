@@ -4,7 +4,7 @@ import Main from "@/components/main";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-start w-full px-20 py-10">
+    <div className="flex flex-col items-start w-full px-10 py-5 sm:px-20 sm:py-10 min-h-screen">
       <Header />
       <Main />
       <Footer />

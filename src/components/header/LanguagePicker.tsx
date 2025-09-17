@@ -30,13 +30,13 @@ export default function LanguagePicker() {
         )
     }
 
-    return (<div className="outline-solid outline-mainact outline-3 px-5 ml-5">
+    return (<div className="outline-solid outline-mainact outline-3 px-2 ml-3 sm:px-5 sm:ml-5">
         <select 
             value={locale} 
             aria-label={translator("language_label")}
             name="language" 
             id="language-picker" 
-            className="text-textbase bg-transparent align-middle w-full h-full outline-none" 
+            className="text-sm sm:text-base text-textbase bg-transparent align-middle w-full h-full outline-none" 
             onChange={(e) => handleLanguageChange(e.target.value)}
         >
             <option value="pt-BR" className="text-ltext">Português</option>

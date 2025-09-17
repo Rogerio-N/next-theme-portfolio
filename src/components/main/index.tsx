@@ -19,20 +19,20 @@ export default function Main() {
         return null
     }
 
-    return <main className="mt-8">
+    return <main className="mt-4 sm:mt-8">
         <section className="flex">
-            <h1 className="text-texthighlight text-4xl mr-2">Rogério Nakayama Bernardo</h1>
+            <h1 className="text-texthighlight text-xl sm:text-4xl sm:mr-2">Rogério Nakayama Bernardo</h1>
             <Badge />
         </section>
         <section>
             <article>
-                <h2 className="text-textbase text-2xl mt-4">{translator('role')}</h2>
-                <p className="test-textbase text-base mt-5 text-justify">{translator('workDescription')}</p>
-                <p className="text-textbase text-base mt-3">{translator('personalTime')}</p>
-                <button className="text-mainact border-mainact border-3 p-3 px-7 my-5 hover:bg-hover hover:cursor-pointer">{translator('contactButton')}</button>
+                <h2 className="text-textbase text-xl mt-2 sm:text-2xl sm:mt-4">{translator('role')}</h2>
+                <p className="test-textbase text-sm sm:text-base mt-3 text-justify sm:mt-5">{translator('workDescription')}</p>
+                <p className="text-textbase text-sm sm:text-base mt-3">{translator('personalTime')}</p>
+                <button className="text-mainact border-mainact border-3 py-2 px-4 sm:py-3 sm:px-7 my-5 hover:bg-hover hover:cursor-pointer active:bg-hover">{translator('contactButton')}</button>
             </article>
         </section>
-        <section className="flex justify-between">
+        <section className="flex justify-between flex-col lg:flex-row">
             <Skills />
             <Projects />
         </section>

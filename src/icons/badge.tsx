@@ -24,7 +24,8 @@ export default function Badge() {
     return <Image 
         src={path}
         alt={translator('Badge.description')}
-        width={30}
-        height={30}
+        width={1}
+        height={1}
+        className="w-6 sm:w-8"
     />
 }

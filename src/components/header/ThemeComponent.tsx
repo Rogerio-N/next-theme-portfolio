@@ -24,7 +24,7 @@ export default function ThemeComponent() {
 
     return (
         <div className="hover:cursor-pointer" onClick={handleThemeChange}>
-            {isThemeLightActive ? <SunIcon className="w-8 h-full align-middle"/> : <MoonIcon className="w-6 h-full align-middle rotate-270"/>}
+            {isThemeLightActive ? <SunIcon className="w-6 sm:w-8 h-full align-middle"/> : <MoonIcon className="w-5 h-full align-middle rotate-270 sm:w-6"/>}
         </div>
     )
 }

@@ -10,7 +10,7 @@ export default function Skills() {
         'Functional Testing', 
         'Regression Testing', 
         'Documentation',
-        'UI Testing (web/mobile)',
+        'UI Testing',
         'API Testing',
         'Performance Testing',
         'Postman',
@@ -35,11 +35,11 @@ export default function Skills() {
         return null
     }
 
-    return <article className="w-2/5">
-        <h2 className="text-textbase text-2xl font-bold mb-2">{translator('skills')}</h2>
+    return <article className="lg:w-2/5">
+        <h2 className="text-textbase text-xl sm:text-2xl font-bold mb-2">{translator('skills')}</h2>
         <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => 
-                <p id={index.toString()} key={index} className="text-textbase border-2 border-mainact w-fit max-w-xs px-5 py-1 rounded-4xl">{skill}</p>
+                <p id={index.toString()} key={index} className="text-textbase text-sm sm:text-base sm:text-base border-2 border-mainact w-fit max-w-xs px-2 py-1 sm:px-5 sm:py-2 rounded-3xl sm:rounded-4xl">{skill}</p>
             )}
         </div>
     </article>
