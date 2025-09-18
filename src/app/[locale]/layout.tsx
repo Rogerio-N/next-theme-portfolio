@@ -51,6 +51,7 @@ export default async function RootLayout({
                     <ThemeProvider enableSystem={true} defaultTheme="system">
                         {children}
                         <SpeedInsights />
+                        <Analytics />
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>
