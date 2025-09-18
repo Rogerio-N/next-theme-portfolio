@@ -23,8 +23,8 @@ export default function ThemeComponent() {
     const isThemeLightActive = theme === "light"
 
     return (
-        <div className="hover:cursor-pointer" onClick={handleThemeChange}>
+        <button onClick={handleThemeChange}>
             {isThemeLightActive ? <SunIcon className="w-6 sm:w-8 h-full align-middle"/> : <MoonIcon className="w-5 h-full align-middle rotate-270 sm:w-6"/>}
-        </div>
+        </button>
     )
 }
