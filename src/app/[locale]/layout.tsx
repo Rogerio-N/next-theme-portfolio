@@ -5,6 +5,8 @@ import '../globals.css'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata, Viewport } from 'next'
 
 const inter = Inter({
@@ -48,6 +50,8 @@ export default async function RootLayout({
                 <NextIntlClientProvider>
                     <ThemeProvider enableSystem={true} defaultTheme="system">
                         {children}
+                        <SpeedInsights />
+                        <Analytics />
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>
