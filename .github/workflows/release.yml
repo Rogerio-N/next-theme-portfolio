@@ -24,7 +24,5 @@ jobs:
       - name: Trigger Vercel Deploy Hook
         env:
             VERCEL_ENV: production
-            HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
           echo "Deploying to $VERCEL_ENV environment..."
-          curl -X POST "$HOOK"
