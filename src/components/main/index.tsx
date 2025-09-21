@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Skills from "./skills";
 import Projects from "./projects";
-import SendEmailModal from "./sendEmailModal";
+import SendEmailModal from "../shared/sendEmailModal";
 
 export default function Main() {
 

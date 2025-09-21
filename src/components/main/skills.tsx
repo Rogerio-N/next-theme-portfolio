@@ -1,7 +1,4 @@
-'use client'
-
 import { useTranslations } from "next-intl"
-import { useEffect, useState } from "react"
 
 export default function Skills() {
     const skills = [
@@ -25,15 +22,6 @@ export default function Skills() {
     ]
 
     const translator = useTranslations('Home')
-    const [mounted, setMounted] = useState(false)
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     return <article className="lg:w-2/5">
         <h2 className="text-textbase text-xl sm:text-2xl font-bold mb-2">{translator('skills')}</h2>

@@ -1,9 +1,6 @@
-'use client'
-
 import {useLocale, useTranslations} from 'next-intl';
 import {usePathname, useRouter} from '@/i18n/navigation';
 import { useParams } from "next/navigation";
-import { useEffect, useState } from 'react';
 
 export default function LanguagePicker() {
     
@@ -11,16 +8,7 @@ export default function LanguagePicker() {
     const pathname = usePathname();
     const router = useRouter();
     const params = useParams();
-    const [mounted, setMounted] = useState(false)
     const translator = useTranslations('Header')
-        
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     function handleLanguageChange(value:string) {
         router.replace(

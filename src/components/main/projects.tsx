@@ -1,18 +1,8 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Projects() {
     const translator = useTranslations('Home')
-    const [mounted, setMounted] = useState(false)
-    
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     return <article className="mt-5 lg:mt-0 lg:w-1/2">
         <h2 className="text-textbase text-xl sm:text-2xl font-bold mb-2">{translator('projects')}</h2>

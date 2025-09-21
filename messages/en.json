@@ -4,7 +4,8 @@
         "description": "This is profesisonal QA Portfolio, presenting details about my experience, skills and personal projects. Hope we get in touch"
     },
     "Header": {
-        "language_label": "Language:"
+        "language_label": "Language:",
+        "theme_button": "Theme selector button"
     },
     "Home": {
         "Badge": {
