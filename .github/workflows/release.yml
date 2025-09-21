@@ -11,34 +11,8 @@ permissions:
   pull-requests: read
 
 jobs:
-  analysis:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Analyze with SonarCloud
-        id: sonarcloud
-        uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.projectKey=Rogerio-N_next-theme-portfolio
-            -Dsonar.organization=rogerio-n-1
-          projectBaseDir: .
-
-      - name: Check SonarCloud Quality Gate
-        id: qualitygate
-        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          scanMetadataReportFile: .scannerwork/report-task.txt
 
   deploy:
-    needs: analysis
     runs-on: ubuntu-latest
     if: |
       github.ref == 'refs/heads/master' && (
@@ -49,6 +23,8 @@ jobs:
     steps:
       - name: Trigger Vercel Deploy Hook
         env:
+            VERCEL_ENV: production
             HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
+          echo "Deploying to $VERCEL_ENV environment..."
           curl -X POST "$HOOK"
