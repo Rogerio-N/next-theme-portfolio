@@ -19,20 +19,9 @@ export const viewport: Viewport = {
     initialScale: 1
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-    const store = await cookies()
-    const locale = store.get("locale")?.value || "en"
-    const messages = locale === "pt-BR" ? ptMessages : enMessages
-
-    return {
-        title: messages.Metadata.title,
-        description: messages.Metadata.description,
-        openGraph: {
-            title: messages.Metadata.title,
-            description: messages.Metadata.description,
-            locale
-        }
-    }
+export const metadata: Metadata = {
+    title: 'Rogerio Nakayama QA',
+    description: 'This is profesisonal QA Portfolio, presenting details about my experience, skills and personal projects. Hope we get in touch | Esse é meu portfolio profissional de QA, apresentando detalhes sobre minha experiencias, habilidades e projetos pessoais. Espero que entremos em contato'
 }
 
 type Props = {
