@@ -4,7 +4,8 @@
         "description": "This is profesisonal QA Portfolio, presenting details about my experience, skills and personal projects. Hope we get in touch"
     },
     "Header": {
-        "language_label": "Language:"
+        "language_label": "Language:",
+        "theme_button": "Theme selector button"
     },
     "Home": {
         "Badge": {
@@ -16,7 +17,19 @@
         "contactButton": "CONTACT ME",
         "skills": "Skills",
         "projects": "Projects",
-        "cog_alt": "Image of a lig gray cog"
+        "cog_alt": "Image of a lig gray cog",
+        "Modal": {
+            "title": "Contact me",
+            "email_label": "Your E-mail",
+            "email_placeholder": "example@email.com",
+            "email_required": "The field E-mail is required",
+            "email_invalid": "The field E-mail is invalid",
+            "message_label": "Message",
+            "message_placeholder": "Type your message",
+            "message_required": "The field Message is required",
+            "message_lenght_error": "The message length is greater than 255 characters",
+            "send_button": "Send"
+        }
     },
     "Footer": {
         "contact": "Contact Me"

@@ -3,6 +3,7 @@
 @theme {
   --color-lbackground: #F9FAFB;
   --color-dbackground: #0F172A;
+  --color-modal-bg: #F3F4F6;
   --color-textbase: #111827;
   --color-ltext: #111827;
   --color-dtext: #F8FAFC;
@@ -21,6 +22,7 @@
     --color-mainact: #1E3A8A;
     --color-secondaryact: #3B82F6;
     --color-hover: #8aa4ec;
+    --color-modal-bg: #FFFFFF;
   }
   [data-theme="dark"] {
     --color-textbase: #F8FAFC;
@@ -30,6 +32,7 @@
     --color-mainact: #3B82F6;
     --color-secondaryact: #1E3A8A;
     --color-hover: #173463;
+    --color-modal-bg: #1E293B;
   }
 }
 

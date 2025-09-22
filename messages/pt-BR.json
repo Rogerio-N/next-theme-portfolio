@@ -4,7 +4,8 @@
         "description": "Esse é meu portfolio profissional de QA, apresentando detalhes sobre minha experiencias, habilidades e projetos pessoais. Espero que entremos em contato"
     },
     "Header": {
-        "language_label": "Idioma:"
+        "language_label": "Idioma:",
+        "theme_button": "Botão de seletor de tema"
     },
     "Home": {
         "Badge": {
@@ -16,7 +17,19 @@
         "contactButton": "ENTRAR EM CONTATO",
         "skills": "Habilidades",
         "projects": "Projetos",
-        "cog_alt": "Image of a lig gray cog"
+        "cog_alt": "Image of a lig gray cog",
+        "Modal": {
+            "title": "Entrar em contato",
+            "email_label": "Seu E-mail",
+            "email_placeholder": "example@email.com",
+            "email_required": "O campo E-mail é obrigatório",
+            "email_invalid": "O campo E-mail não é valido",
+            "message_label": "Mensagem",
+            "message_placeholder": "Digite sua mensagem",
+            "message_required": "O campo Mensagem é obrigatório",
+            "message_lenght_error": "O tamanho da mensagem é maior que 255 caracteres",
+            "send_button": "Enviar"
+        }
     },
     "Footer": {
         "contact": "Contate-me"

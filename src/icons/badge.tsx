@@ -6,11 +6,10 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export default function Badge() {
-    const themeProvider = useTheme()
+    const [mounted, setMounted] = useState(false)
+    const {theme} = useTheme()
     const translator = useTranslations('Home')
 
-    const [mounted, setMounted] = useState(false)
-    
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -18,8 +17,9 @@ export default function Badge() {
     if (!mounted) {
         return null
     }
+    
 
-    const path = themeProvider.theme === 'light' ? '/badge-tema-claro.svg' : '/badge-tema-escuro.svg'
+    const path = theme === 'light' ? '/badge-tema-claro.svg' : '/badge-tema-escuro.svg'
 
     return <Image 
         src={path}
