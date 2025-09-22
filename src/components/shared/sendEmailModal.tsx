@@ -20,7 +20,7 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
 
     const validateEmail = (email: string) => {
         let emailError = ""
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
         if (!email.trim()) {
             emailError = translator("email_required");
