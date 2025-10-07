@@ -1,3 +1,4 @@
+import { sendEmail } from "@/services/EmailService";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -41,7 +42,7 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
         return messageError
     }
 
-    const handleSend = () => {
+    const handleSend = async () => {
         const newErrors: { email?: string; message?: string } = {};
 
         const isValidEmail = validateEmail(email)
@@ -54,9 +55,17 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
             setErrors(newErrors);
             return;
         }
+
+        const res = await sendEmail({
+            content: message,
+            from: email
+        })
         
-        console.log("Email:", email);
-        console.log("Message:", message);
+        if (!res.success) {
+            // alert("Erro ao enviar o e-mail");
+            return
+        }
+
         alert("E-mail enviado com sucesso!");
         closeModal();
     };
