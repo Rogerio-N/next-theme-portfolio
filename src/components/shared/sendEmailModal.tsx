@@ -1,20 +1,32 @@
+import { sendEmail } from "@/services/EmailService";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: boolean; onClose: () => void }>) {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [isLoading, setIsLoading] = useState(false)
     const [errors, setErrors] = useState<{ email?: string; message?: string }>({});
     const maxMessageLenght = 255
     const translator = useTranslations('Home.Modal')
 
     if (!isOpen) return null
 
+    const notifySuccess = () => {
+        toast.success(translator("toast_success"))
+    }
+
+    const notifyError = () => {
+        toast.success(translator("toast_error"))
+    }
+
     const closeModal = () => {
         setEmail("")
         setMessage("")
         setErrors({})
+        setIsLoading(false)
         onClose()
     }
 
@@ -41,7 +53,7 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
         return messageError
     }
 
-    const handleSend = () => {
+    const handleSend = async () => {
         const newErrors: { email?: string; message?: string } = {};
 
         const isValidEmail = validateEmail(email)
@@ -54,10 +66,21 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
             setErrors(newErrors);
             return;
         }
+        setIsLoading(true)
+
+        const res = await sendEmail({
+            content: message,
+            from: email
+        })
+
+        setIsLoading(false)
         
-        console.log("Email:", email);
-        console.log("Message:", message);
-        alert("E-mail enviado com sucesso!");
+        if (!res.success) {
+            notifyError()
+            return
+        }
+
+        notifySuccess()
         closeModal();
     };
 
@@ -105,10 +128,13 @@ export default function SendEmailModal({ isOpen, onClose }: Readonly<{ isOpen: b
                 <div className="flex justify-end space-x-2 mt-3">
                     <button
                         type="submit"
-                        className="bg-mainact text-white px-4 py-2 rounded hover:cursor-pointer"
+                        className={`bg-mainact text-white px-4 py-2 rounded hover:cursor-pointer ${
+                            isLoading ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
                         onClick={handleSend}
+                        disabled={isLoading}
                     >
-                        {translator("send_button")}
+                        {isLoading ? translator("loading_button") : translator("send_button")}
                     </button>
                 </div>
             </div>
