@@ -7,7 +7,7 @@ import SendEmailModal from "../shared/sendEmailModal";
 export default function FooterModalTrigger() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const translator = useTranslations('Footer')
-    
+
     return (
         <section>
             <button

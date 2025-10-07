@@ -28,7 +28,10 @@
             "message_placeholder": "Type your message",
             "message_required": "The field Message is required",
             "message_lenght_error": "The message length is greater than 255 characters",
-            "send_button": "Send"
+            "send_button": "Send",
+            "loading_button": "Loading...",
+            "toast_success": "The email has been sent with success!",
+            "toast_error": "An error occurred while sending the email! Try again later."
         }
     },
     "Footer": {

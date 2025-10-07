@@ -28,7 +28,10 @@
             "message_placeholder": "Digite sua mensagem",
             "message_required": "O campo Mensagem é obrigatório",
             "message_lenght_error": "O tamanho da mensagem é maior que 255 caracteres",
-            "send_button": "Enviar"
+            "send_button": "Enviar",
+            "loading_button": "Carregando...",
+            "toast_success": "O email foi enviado com sucesso!",
+            "toast_error": "Ocorreu um erro ao enviar o email! Tente novamente mais tarde."
         }
     },
     "Footer": {
