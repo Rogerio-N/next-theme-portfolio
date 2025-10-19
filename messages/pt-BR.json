@@ -16,7 +16,20 @@
         "personalTime": "Quando não estou trabalhando, provavelmente vou estar cozinhando um prato gostoso ou provavelmente jogando video-game com amigos e minha família",
         "contactButton": "ENTRAR EM CONTATO",
         "skills": "Habilidades",
-        "projects": "Projetos",
+        "Projects": {
+            "title": "Projects",
+            "Content": {
+                "JavaRestAssured": {
+                    "name": "Teste de integração com Java + RestAssured"
+                },
+                "QuickpizzaK6": {
+                    "name": "Teste de carga do QuickPizza com K6 + JavaScript"
+                },
+                "CypressRWA": {
+                    "name": "Testes ponta a ponta do Real World App com Cypress + Typescript"
+                }
+            }
+        },
         "cog_alt": "Image of a lig gray cog",
         "Modal": {
             "title": "Entrar em contato",

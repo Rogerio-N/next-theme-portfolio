@@ -16,7 +16,20 @@
         "personalTime": "When i am not working, i will probably be cooking a nice dish or maybe playing some video-games with my friends and family.",
         "contactButton": "CONTACT ME",
         "skills": "Skills",
-        "projects": "Projects",
+        "Projects": {
+            "title": "Projects",
+            "Content": {
+                "JavaRestAssured": {
+                    "name": "Java + RestAssured integration testing"
+                },
+                "QuickpizzaK6": {
+                    "name": "K6 + JavaScript load testing the QuickkPizza"
+                },
+                "CypressRWA": {
+                    "name": "Cypress + Typescript e2e testing the Real World App"
+                }
+            }
+        },
         "cog_alt": "Image of a lig gray cog",
         "Modal": {
             "title": "Contact me",
