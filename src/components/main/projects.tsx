@@ -12,8 +12,8 @@ export default function Projects() {
         <h2 className="text-textbase text-xl sm:text-2xl font-bold mb-2">{title}</h2>
         <nav className="static flex flex-col">
             {
-                projectKeys.map((key, index) => (
-                    <Link key={index} className="text-sm sm:text-base underline underline-offset-3 mt-2" href={contentTranslator(`${key}.link`)} target="_blank">{contentTranslator(`${key}.name`)}</Link>
+                projectKeys.map((key) => (
+                    <Link id={key} key={key} className="text-sm sm:text-base underline underline-offset-3 mt-2" href={contentTranslator(`${key}.link`)} target="_blank">{contentTranslator(`${key}.name`)}</Link>
                 ))
             }
         </nav>
