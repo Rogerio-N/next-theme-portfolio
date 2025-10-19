@@ -16,7 +16,27 @@
         "personalTime": "Quando não estou trabalhando, provavelmente vou estar cozinhando um prato gostoso ou provavelmente jogando video-game com amigos e minha família",
         "contactButton": "ENTRAR EM CONTATO",
         "skills": "Habilidades",
-        "projects": "Projetos",
+        "Projects": {
+            "title": "Projects",
+            "Content": {
+                "PactTesting": {
+                    "name": "Teste de contrato de consumidor e provedor com Pact + React + SpringBoot",
+                    "link": "https://github.com/Rogerio-N/contract-testing-react-spring-pact"
+                },
+                "JavaRestAssured": {
+                    "name": "Teste de integração com Java + RestAssured",
+                    "link": "https://github.com/Rogerio-N/java-rest-assured-test"
+                },
+                "QuickpizzaK6": {
+                    "name": "Teste de carga do QuickPizza com K6 + JavaScript",
+                    "link": "https://github.com/Rogerio-N/k6-js-test"
+                },
+                "CypressRWA": {
+                    "name": "Testes ponta a ponta do Real World App com Cypress + Typescript",
+                    "link": "https://github.com/Rogerio-N/cypress-ts-test"
+                }
+            }
+        },
         "cog_alt": "Image of a lig gray cog",
         "Modal": {
             "title": "Entrar em contato",

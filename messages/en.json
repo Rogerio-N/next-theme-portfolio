@@ -16,7 +16,27 @@
         "personalTime": "When i am not working, i will probably be cooking a nice dish or maybe playing some video-games with my friends and family.",
         "contactButton": "CONTACT ME",
         "skills": "Skills",
-        "projects": "Projects",
+        "Projects": {
+            "title": "Projects",
+            "Content": {
+                "PactTesting": {
+                    "name": "Pact + React + SpringBoot consumer and provider contract testing ",
+                    "link": "https://github.com/Rogerio-N/contract-testing-react-spring-pact"
+                },
+                "JavaRestAssured": {
+                    "name": "Java + RestAssured integration testing",
+                    "link": "https://github.com/Rogerio-N/java-rest-assured-test"
+                },
+                "QuickpizzaK6": {
+                    "name": "K6 + JavaScript load testing the QuickkPizza",
+                    "link": "https://github.com/Rogerio-N/k6-js-test"
+                },
+                "CypressRWA": {
+                    "name": "Cypress + Typescript e2e testing the Real World App",
+                    "link": "https://github.com/Rogerio-N/cypress-ts-test"
+                }
+            }
+        },
         "cog_alt": "Image of a lig gray cog",
         "Modal": {
             "title": "Contact me",
