@@ -19,6 +19,10 @@
         "Projects": {
             "title": "Projects",
             "Content": {
+                "PactTesting": {
+                    "name": "Pact + React + SpringBoot consumer and provider contract testing ",
+                    "link": "https://github.com/Rogerio-N/contract-testing-react-spring-pact"
+                },
                 "JavaRestAssured": {
                     "name": "Java + RestAssured integration testing",
                     "link": "https://github.com/Rogerio-N/java-rest-assured-test"
