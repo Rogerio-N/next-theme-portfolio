@@ -20,13 +20,16 @@
             "title": "Projects",
             "Content": {
                 "JavaRestAssured": {
-                    "name": "Teste de integração com Java + RestAssured"
+                    "name": "Teste de integração com Java + RestAssured",
+                    "link": "https://github.com/Rogerio-N/java-rest-assured-test"
                 },
                 "QuickpizzaK6": {
-                    "name": "Teste de carga do QuickPizza com K6 + JavaScript"
+                    "name": "Teste de carga do QuickPizza com K6 + JavaScript",
+                    "link": "https://github.com/Rogerio-N/k6-js-test"
                 },
                 "CypressRWA": {
-                    "name": "Testes ponta a ponta do Real World App com Cypress + Typescript"
+                    "name": "Testes ponta a ponta do Real World App com Cypress + Typescript",
+                    "link": "https://github.com/Rogerio-N/cypress-ts-test"
                 }
             }
         },
